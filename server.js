@@ -7,9 +7,8 @@ app.use(cors())
 app.get('/', async(req, res) =>{
 
     try {
-        const { data } = await axios('https://jsonplaceholder.typicode.com/users')
-        //return res.json(data)
-        return res.json([{ name: 'jeff'},{ name: 'diego'}])
+        const { data } = await axios('https://jsonplaceholder.typicode.com/posts')
+        return res.json(data)
         //nesta linha de cima, em vez de nomes, enviar a postagem salva
     } catch (error) {
         console.error(error)
